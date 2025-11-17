@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隐私协议 - 物理模型 (PhyModel)</title>
+    <meta name="description" content="PhyModel 隐私协议 - 我们高度重视您的隐私与数据安全" />
+    
+    <!-- App Icon / Favicon -->
+    <link rel="icon" type="image/png" href="app-icon.png" />
+    <link rel="apple-touch-icon" href="app-icon.png" />
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    
+    <style>
+        :root {
+            --primary: #1976d2;
+            --primary-dark: #1565c0;
+            --primary-light: #42a5f5;
+            --accent: #00acc1;
+            --text: #212121;
+            --text-secondary: #616161;
+            --bg: #ffffff;
+            --bg-light: #f5f7fa;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            color: var(--primary-dark);
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e88e5, #1565c0);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+        }
+        
+        .logo-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+        
+        .logo .material-icons {
+            font-size: 32px;
+            color: white;
+        }
+        
+        /* 内容区域 */
+        .content {
+            margin-top: 70px;
+            padding: 60px 0;
+            min-height: calc(100vh - 70px);
+        }
+        
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .privacy-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+        
+        .privacy-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 20px;
+        }
+        
+        .privacy-content h2 {
+            font-size: 24px;
+            color: var(--text);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .privacy-content h3 {
+            font-size: 20px;
+            color: var(--text);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .privacy-content ul,
+        .privacy-content ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 10px;
+        }
+        
+        .privacy-content a {
+            color: var(--primary);
+            text-decoration: underline;
+            transition: var(--transition);
+        }
+        
+        .privacy-content a:hover {
+            color: var(--primary-dark);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            margin-top: 30px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            background: rgba(25, 118, 210, 0.08);
+            color: var(--primary-dark);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 30px 20px;
+            }
+            
+            .privacy-title {
+                font-size: 28px;
+            }
+            
+            .privacy-content h2 {
+                font-size: 20px;
+            }
+            
+            .privacy-content h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" role="navigation">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <span>PhyModel</span>
+            </a>
+        </div>
+    </nav>
+    
+    <!-- 内容区域 -->
+    <div class="content">
+        <div class="container">
+            <div class="privacy-container">
+                <h1 class="privacy-title">隐私协议</h1>
+                <div class="privacy-content">
+                    <p>感谢使用物理模型 (PhyModel)。我们高度重视您的隐私与数据安全。</p>
+                    
+                    <h2>1. 信息收集</h2>
+                    <p>本应用不收集任何可识别个人身份的信息。功能所需的数据仅在您的设备本地处理，不会上传到任何服务器。</p>
+                    
+                    <h2>2. 数据使用</h2>
+                    <p>所有数据处理均在您的设备本地完成。我们不会收集、存储或传输您的个人信息、学习数据或使用习惯。</p>
+                    
+                    <h2>3. 第三方服务</h2>
+                    <p>本应用可能使用第三方服务（如 App Store）来提供下载和更新功能。这些服务的使用受其各自的隐私政策约束。</p>
+                    
+                    <h2>4. 隐私说明</h2>
+                    <p>如需了解更多关于隐私保护的信息，请访问 App Store 应用页面的隐私说明。</p>
+                    <p><a href="https://apps.apple.com/cn/app/phymo/id1643325396?l=en-GB" target="_blank" rel="noopener">前往 App Store 查看隐私说明</a></p>
+                    
+                    <h2>5. 协议更新</h2>
+                    <p>我们可能会不定期更新本隐私协议。更新后的协议将在本页面发布，请定期查看以了解最新信息。</p>
+                    
+                    <h2>6. 联系我们</h2>
+                    <p>如果您对本隐私协议有任何疑问或建议，欢迎通过 App 内的反馈功能与我们联系。</p>
+                    
+                    <h2>7. 同意与使用</h2>
+                    <p>若您不同意本协议，请停止使用本应用。继续使用本应用即表示您同意本隐私协议的所有条款。</p>
+                    
+                    <p style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--bg-light); color: var(--text-secondary); font-size: 14px;">
+                        最后更新日期：2024年
+                    </p>
+                    
+                    <a href="index.html" class="back-link">
+                        <span class="material-icons">arrow_back</span>
+                        <span>返回主页</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
